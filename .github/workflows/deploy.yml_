@@ -76,3 +76,4 @@ jobs:
             docker compose ps
             # 로그 확인 필요 시:
             # docker compose logs --tail=100 --no-color
+            
