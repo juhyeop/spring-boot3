@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import java.util.List;
+import java.util.Map;
 
 @RestController
 public class UserController2 {
@@ -30,9 +31,9 @@ public class UserController2 {
     public String dbTest2() {
         try {
 
-            String sql = "SELECT id FROM member";
-            List<String> ids = jdbcTemplate.queryForList(sql, String.class);
-            return "member ids : " + ids;
+            String sql = "SELECT id, pw FROM member";
+            List<Map<String, Object>> members = jdbcTemplate.queryForList(sql);
+            return "member : " + members;
         } catch (Exception e) {
             e.printStackTrace();
             return "Database connection failed! Error: " + e.getMessage();
