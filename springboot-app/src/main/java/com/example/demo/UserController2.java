@@ -26,11 +26,13 @@ public class UserController2 {
 //select id form member;
 
     @GetMapping("/mysql2")
+   @GetMapping("/mysql2")
     public String dbTest2() {
         try {
-            String sql = "SELECT now()";
-            String result = jdbcTemplate.queryForObject(sql, String.class);
-            return "Database test successful. now() : " + result;
+
+            String sql = "SELECT id FROM member";
+            List<String> ids = jdbcTemplate.queryForList(sql, String.class);
+            return "member ids : " + ids;
         } catch (Exception e) {
             e.printStackTrace();
             return "Database connection failed! Error: " + e.getMessage();
