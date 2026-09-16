@@ -5,6 +5,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.data.redis.core.StringRedisTemplate;
+import java.util.List;
 
 @RestController
 public class UserController2 {
