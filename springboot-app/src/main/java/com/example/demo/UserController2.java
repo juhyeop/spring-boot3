@@ -25,7 +25,6 @@ public class UserController2 {
 //member(id, pw)
 //select id form member;
 
-    @GetMapping("/mysql2")
    @GetMapping("/mysql2")
     public String dbTest2() {
         try {
