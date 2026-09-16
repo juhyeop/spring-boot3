@@ -1,6 +1,6 @@
 services:
   web2:
-    image: juhyeop/springboot2-web3:latest
+    image: juhyeop/springboot2-web3:2.0
     container_name: springboot_app2
     ports:
       - "9090:8080"

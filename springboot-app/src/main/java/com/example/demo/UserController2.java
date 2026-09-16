@@ -18,7 +18,7 @@ public class UserController2 {
     // get요청(/로 요청한 경우 Spring Boot START PAGE글자가 화면에 보이게함.)
     @GetMapping("/")
     public String hello() {
-        return "Spring Boot! START PAGE";
+        return "<body bgcolor=yellow>changed------!!!!!!</body>";
     }
 
     @GetMapping("/mysql")
