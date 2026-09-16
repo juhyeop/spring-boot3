@@ -18,7 +18,7 @@ public class UserController2 {
     // /red, get요청시 배경화면 red인 html이 보이게!!
     @GetMapping("/")
     public String hello2() {
-        return "<body bgcolor=yellow>changed------!!!!!!</body>";
+        return "<body bgcolor=red>changed------!!!!!!</body>";
     }
 
 //table생성
