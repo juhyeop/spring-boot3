@@ -15,14 +15,18 @@ public class UserController2 {
     @Autowired
     private StringRedisTemplate redis;
 
-    // get요청(/로 요청한 경우 Spring Boot START PAGE글자가 화면에 보이게함.)
+    // /red, get요청시 배경화면 red인 html이 보이게!!
     @GetMapping("/")
-    public String hello() {
+    public String hello2() {
         return "<body bgcolor=yellow>changed------!!!!!!</body>";
     }
 
-    @GetMapping("/mysql")
-    public String dbTest() {
+//table생성
+//member(id, pw)
+//select id form member;
+
+    @GetMapping("/mysql2")
+    public String dbTest2() {
         try {
             String sql = "SELECT now()";
             String result = jdbcTemplate.queryForObject(sql, String.class);
@@ -44,6 +48,8 @@ public class UserController2 {
             return "Redis SET failed! Error: " + e.getMessage();
         }
     }
+
+
 
     @GetMapping("/redis-get")
     public String redisGet() {
